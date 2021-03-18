@@ -1,7 +1,7 @@
 
 # Important! Don't upload the configs (which have API certs) to github
 configs/*
-!configs/.showme
+!configs/template.ini
 
 
 # ignore the IDE stuff
