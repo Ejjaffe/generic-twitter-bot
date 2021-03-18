@@ -1,0 +1,7 @@
+
+# Important! Don't upload the configs (which have API certs) to github
+configs/
+
+# ignore the IDE stuff
+.dccache
+.vscode/*
