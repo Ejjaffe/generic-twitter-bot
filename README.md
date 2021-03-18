@@ -3,7 +3,7 @@ Secure generic template for python twitter bots.
 
 ## Setup
 ### Fork the repo!
-You know you want to.
+Or do something with templates if I've set that up.
 
 ### API Tokens
 Get your [Twitter API tokens](https://developer.twitter.com/en/support/twitter-api).
@@ -41,13 +41,18 @@ Storing your changes to the python env from inside the activated conda env:
 ```bash
 conda env export > generic_twitter_bot.yml
 ```
-
-### Visual Studio Code `import` / `no package found` Errors
-Open the command palate (CTRL + SHIFT + P) and look for `Python: Select Interpreter`. If the conda env for this project (`generic_twitter_bot` by default) cannot be selected, then click `Enter interpreter path`, navigate to your `Anaconda3/envs/` folder, navigate to the folder for your conda environment, and select the `python.exe` file. This will let python know what packages are available.
-
 ### Generic Workflow
-The main idea is to add modules to `src/` and then import them into `client.py` as needed. One pattern I've found to be effective for rapid development is creating a single API object in `client.py` and passing it into instances of an abstract base (or just base) "skill" class that takes the API and does things with it. You can set up a listener or some sort of control flow class this way. Neat Bonus: This way you can also set up a testing account to run your tests on. 
+The main idea is to add modules to `src/` (or another dir/project entirely) and then import them into `client.py` as needed. One pattern I've found to be effective for rapid development is creating a single API object in `client.py` and passing it into instances of an abstract base (or just base) "skill" class that takes the API and does things with it. You can set up a listener or some sort of control flow class this way. Neat Bonus: This way you can also set up a testing account to run your tests on. 
 
 If you've got a better pattern for this, open an issue and let me know. I'm sure there's probably a nicer way to do it.
 
+## Tips / Troubleshooting
+### Visual Studio Code `import` / `no package found` Errors
+Open the command palate (CTRL + SHIFT + P) and look for `Python: Select Interpreter`. If the conda env for this project (`generic_twitter_bot` by default) cannot be selected, then click `Enter interpreter path`, navigate to your `Anaconda3/envs/` folder, navigate to the folder for your conda environment, and select the `python.exe` file. This will let python know what packages are available in your environment, and automatically activate the env in VSCode terminal windows.
 
+### Relevant Documentation
+The documentation you'll need while developing the bot is here:
+ - [Twitter Developer Homepage](https://developer.twitter.com/en)
+ - [Twitter Standard API V1.1 Docs](https://developer.twitter.com/en/docs/twitter-api/v1)
+ - [Python-Twitter Github](https://github.com/bear/python-twitter)
+ - [Python-Twitter Docs](https://python-twitter.readthedocs.io/en/latest/)
