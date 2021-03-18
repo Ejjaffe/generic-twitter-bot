@@ -1,4 +1,4 @@
-# generic-twitter-bot-template
+# generic-twitter-bot
 Secure generic template for python twitter bots.
 
 ## Setup
